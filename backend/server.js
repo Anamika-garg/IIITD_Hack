@@ -1,7 +1,6 @@
 const express = require("express");
 const { getMergedData } = require("./getData");
 const { getAmountData } = require("./getUserAmountData");
-
 const app = express();
 
 const cors = require('cors');

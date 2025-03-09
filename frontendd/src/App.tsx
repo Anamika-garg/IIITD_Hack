@@ -7,6 +7,8 @@ import { UserFinancialData } from "./types";
 import { mockFinancialData } from "./mockData";
 import clsx from "clsx";
 import FinancialDashboard from "./components/FinancialDashboard";
+import {Link} from 'react-router-dom';
+import CURDashboard from './templates/CURDashboard'
 function App() {
   const [component, setComponent] = useState(false);
   const [userId, setUserId] = useState("");
@@ -72,10 +74,15 @@ function App() {
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between">
           <h1 className="text-2xl font-bold text-gray-900">
             Financial Dashboard
           </h1>
+          <Link to={'/cuf'}>
+          <h1 className="text-[17px] relative top-[2px] font-semibold text-gray-900">
+            Get CUR Insights
+          </h1>
+          </Link>
           {/* {process.env.NODE_ENV === 'development' && (
             // <p className="text-sm text-gray-500 mt-1">Try using User ID: "2" for mock data</p>
           )} */}
